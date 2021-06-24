@@ -1,1 +1,1 @@
-module "testProject"
+module github.com/garaj-production/test-go-project
