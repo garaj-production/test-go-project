@@ -1,5 +1,7 @@
 package main
 
+import "github.com/garaj-production/private-go-dependency/pkg"
+
 func main() {
 	collection := map[string]int{
 		"a": 1,
@@ -9,4 +11,6 @@ func main() {
 	for _, i2 := range collection {
 		sl = append(sl, i2)
 	}
+
+	pkg.CustomPrint(collection)
 }
