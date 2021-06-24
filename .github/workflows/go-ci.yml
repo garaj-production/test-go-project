@@ -11,10 +11,10 @@ jobs:
       GO111MODULE: on
     steps:
       - uses: actions/checkout@v2
-#      - name: Configure git for private modules
-#        env:
-#          TOKEN: ${{ secrets.TEST }}
-#        run: git config --global url."https://ahatojli4:${TOKEN}@github.com".insteadOf "https://github.com"
+      - name: Configure git for private modules
+        env:
+          TOKEN: ${{ secrets.APPTKN }}
+        run: git config --global url."https://x-access-token:${TOKEN}@github.com".insteadOf "https://github.com"
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
