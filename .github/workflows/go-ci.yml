@@ -10,6 +10,10 @@ jobs:
       GOPRIVATE: github.com/garaj-production/*
       GO111MODULE: on
     steps:
+      - name: echo apptkn
+        run: echo ${{ secrets.APPTKN }}
+      - name: echo org trn
+        run: echo ${{ secrets.TEST_TKN }}
       - uses: actions/checkout@v2
       - name: Configure git for private modules
         env:
